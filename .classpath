@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javaFX-11"/>
+	<classpathentry kind="lib" path="C:/lib/ButtonGif.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/tritonus-share-0.3.7-2"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/ButtonGif"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ButtonGif (2)"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/dupra/OneDrive/Java Projects/Contact" sourcepath="C:/Users/dupra/OneDrive/Java Projects/Contact/src"/>
+	<classpathentry kind="output" path="out/production/ToDoList"/>
+</classpath>

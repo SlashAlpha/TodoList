@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <todoitem>
+        <short_descritpion>New Task</short_descritpion>
+        <details>cucarraccaGiraffe</details>
+        <deadline>01-01-2019</deadline>
+        <REMAINING>0</REMAINING>
+        <completed>false</completed>
+        <store>cucarraccaGiraffe</store>
+    </todoitem>
+</items>

@@ -1,0 +1,166 @@
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<BorderPane  fx:id="mainBorderPane" fx:controller="com.learning.duprat.todolist.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+<top>
+    <VBox>
+        <MenuBar>
+            <Menu text="File">
+                <items>
+                    <MenuItem onAction="#showNewItemDialog" text="New Task"/>
+                    <MenuItem onAction="#showEditItemDialog" text="Modify Task"/>
+                    <MenuItem onAction="#newMissionList" text="New List"/>
+                    <MenuItem text="Open.." onAction="#loadTasksList"/>
+                    <MenuItem onAction="#saveCurrentList" text="Save"/>
+                    <MenuItem  text="Save as.." onAction="#saveMissionList"/>
+                    <MenuItem  text="Delete TaskList" onAction="#deleteList"/>
+
+
+                    <SeparatorMenuItem/>
+                    <MenuItem text="Exit" onAction="#handleExit"/>
+                </items>
+
+            </Menu>
+        </MenuBar>
+        <ToolBar>
+            <HBox spacing="6" fx:id="hbox"><Button text="" onAction="#newMissionList">
+                <graphic>
+                    <ImageView><Image url="@/toolbarButtonGraphics/general/New16.gif" /></ImageView>
+                </graphic>
+                <tooltip><Tooltip text="New list of tasks"/></tooltip>
+            </Button>
+                <Button text="" onAction="#loadTasksList">
+                    <graphic>
+                        <ImageView><Image url="@/toolbarButtonGraphics/general/Open16.gif" /></ImageView>
+                    </graphic>
+                    <tooltip><Tooltip text="Open list"/></tooltip>
+                </Button>
+                <Button text="" onAction="#saveCurrentList">
+                    <graphic>
+                        <ImageView><Image url="@/toolbarButtonGraphics/general/Save16.gif" /></ImageView>
+                    </graphic>
+                    <tooltip><Tooltip text="Save"/></tooltip>
+                </Button>
+                <Button text="" onAction="#showNewItemDialog">
+                    <tooltip><Tooltip text="Add a new task"/></tooltip>
+                    <graphic>
+                        <ImageView><Image url="@/toolbarButtonGraphics/general/Paste16.gif" /></ImageView>
+                    </graphic>
+                </Button>
+                <Button text="" onAction="#showEditItemDialog">
+                   <tooltip> <Tooltip text="Modify task"/></tooltip>
+                    <graphic>
+                        <ImageView><Image url="@/toolbarButtonGraphics/general/Preferences16.gif" /></ImageView>
+                    </graphic>
+                </Button>
+                <Button text="" onAction="#deleteMission">
+                    <graphic>
+                        <ImageView><Image url="@/toolbarButtonGraphics/general/Remove16.gif" /></ImageView>
+                    </graphic>
+                    <tooltip><Tooltip text="Delete task"/></tooltip>
+                </Button>
+
+                <Button text="" onAction="#completeMission">
+                    <graphic>
+                        <ImageView><Image url="@/toolbarButtonGraphics/general/Properties16.gif" /></ImageView>
+                    </graphic>
+                    <tooltip><Tooltip text="Finished/Unfinished"/></tooltip>
+                </Button>
+
+                <ChoiceBox fx:id="choiceBox" >
+                    <items>
+                        <FXCollections fx:factory="observableArrayList" >
+
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+             <Label text="Mission completed :"/><Label fx:id="completed"/>
+            </HBox>
+        </ToolBar>
+
+    </VBox>
+
+
+</top>
+    <left >
+        <ListView  fx:id="todoListView" onKeyPressed="#handleKeyPressed" editable="true" ></ListView>
+
+    </left>
+    <center>
+        <VBox  style="-fx-background-color:white">
+            <Label text="Mission description :"/>
+            <TextArea fx:id="description"  wrapText="true" minHeight="280"  ></TextArea>
+
+<BorderPane><left>
+    <Label text="Segmented tasks . Sorting :"/><Label fx:id="sorting"/>
+  </left><center>  <ProgressBar fx:id="pb"></ProgressBar> </center>
+    </BorderPane>
+            <HBox><ListView minWidth="380"  minHeight="300" maxHeight="300"  fx:id="todoTaskview" ></ListView>
+                <VBox spacing="10" >
+                    <Button text="" onAction="#orderUp">
+                        <graphic>
+                            <ImageView><Image url="@/toolbarButtonGraphics/navigation/Up16.gif" /></ImageView>
+                        </graphic>
+                        <tooltip><Tooltip text="Finished/Unfinished"/></tooltip>
+                    </Button>
+                    <Button text="" onAction="#orderDown">
+                        <graphic>
+                            <ImageView><Image url="@/toolbarButtonGraphics/navigation/Down16.gif" /></ImageView>
+                        </graphic>
+                        <tooltip><Tooltip text="Finished/Unfinished"/></tooltip>
+                    </Button>
+                    <Button onAction="#addNewTask" > <tooltip><Tooltip text="Add a new task"/></tooltip>
+                    <graphic>
+                        <ImageView><Image url="@/toolbarButtonGraphics/general/Paste16.gif" /></ImageView>
+                    </graphic></Button>
+                    <Button onAction="#updateTask" > <tooltip><Tooltip text="Update Task"/></tooltip>
+                        <graphic>
+                            <ImageView><Image url="@/toolbarButtonGraphics/general/Preferences16.gif" /></ImageView>
+                        </graphic></Button>
+                    <Button onAction="#deleteTask" > <tooltip><Tooltip text="remove selected Task"/></tooltip>
+                        <graphic>
+                            <ImageView><Image url="@/toolbarButtonGraphics/general/Remove16.gif" /></ImageView>
+                        </graphic></Button>
+                    <Button text="" onAction="#isComplete">
+                        <graphic>
+                            <ImageView><Image url="@/toolbarButtonGraphics/general/Properties16.gif" /></ImageView>
+                        </graphic>
+                        <tooltip><Tooltip text="Finished/Unfinished"/></tooltip>
+                    </Button>
+                    <Button text="" onAction="#sortButton">
+                        <graphic>
+                            <ImageView><Image url="@/toolbarButtonGraphics/general/Properties16.gif" /></ImageView>
+                        </graphic>
+                        <tooltip><Tooltip text="Finished/Unfinished"/></tooltip>
+                    </Button>
+
+                </VBox>
+                <TextArea minWidth="650"   fx:id="fileInfo"  minHeight="300" wrapText="true" ></TextArea>
+               </HBox>
+            <HBox>
+                <Label text=" Due : " style="-fx-background-color:white">
+                    <font>
+                        <Font name="Bauhaus 93" size="15"/>
+                    </font>
+                </Label>
+                <Label fx:id="deadlineLabel" style="-fx-background-color: white" >
+                    <font>
+                        <Font name="Forte" size="15"/>
+                    </font>
+                </Label>
+                <Label text="   remaining days to deadline  :"><font><Font name="Forte" size="15"/> </font></Label>
+                <Label fx:id="reminder"><font><Font name="Forte" size="15"/> </font></Label>
+                <Label text=" Working Period :"><font><Font name="Forte" size="15"/></font> </Label>
+                <Label fx:id="startDay"><font><Font name="Forte" size="15"/></font></Label>
+
+            </HBox>
+        </VBox>
+    </center>
+    <bottom>
+
+    </bottom>
+</BorderPane>

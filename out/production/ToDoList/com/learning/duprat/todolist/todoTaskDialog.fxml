@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.learning.duprat.todolist.TaskController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="Sticker :" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="sticker" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Details:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+
+
+    <TextArea fx:id="detailsArea" GridPane.rowIndex="2" GridPane.columnIndex="1"
+              wrapText="true" />
+    <Label text="Difficulty :" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <border/>
+    <Spinner fx:id="difficulty" GridPane.rowIndex="3" GridPane.columnIndex="1" maxWidth="55" min="0" max="10" editable="true" initialValue="0" amountToStepBy="0.5">
+    </Spinner>
+    <Label text="Estimated Time(hours) : " GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <Spinner  fx:id="estimated" GridPane.rowIndex="4" GridPane.columnIndex="1" maxWidth="55" min="0" max="24" editable="true" initialValue="0" amountToStepBy="0.1">
+    </Spinner>
+
+</GridPane>

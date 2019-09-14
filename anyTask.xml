@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <todoitem>
+        <short_descritpion>hey task</short_descritpion>
+        <details>task task taskcucarraccaGiraffe</details>
+        <deadline>21-02-2019</deadline>
+        <REMAINING>3</REMAINING>
+        <completed>false</completed>
+        <store>cucarraccaGiraffe</store>
+    </todoitem>
+</items>

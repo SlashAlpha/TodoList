@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <todoitem>
+        <short_descritpion>caf actu</short_descritpion>
+        <details>Actualisation cafcucarraccaGiraffe</details>
+        <deadline>28-02-2019</deadline>
+        <REMAINING>6</REMAINING>
+        <completed>true</completed>
+        <store>another
+            onecucaraccahippocucaraccahippo0.0cucaraccahippo19-02-2019cucaraccahippo2cucaraccahippofalsecucaraccahippo0cucaraccahippo0.0cucaraccahippo0.0cucaraccaraccooncucarraccaGiraffe
+        </store>
+    </todoitem>
+    <todoitem>
+        <short_descritpion>new mission</short_descritpion>
+        <details>new missioncucarraccaGiraffe+cucarraccaGiraffe=cucarraccaGiraffe+cucarraccaGiraffe</details>
+        <deadline>07-03-2019</deadline>
+        <REMAINING>4</REMAINING>
+        <completed>false</completed>
+        <store>new
+            taskcucaraccahippocoolcucarraccaGiraffegreatcucarraccaGiraffeSUPERcucaraccahippo2.6cucaraccahippo19-02-2019cucaraccahippo0cucaraccahippofalsecucaraccahippo0cucaraccahippo0.0cucaraccahippo7.5cucaraccaraccooncucarraccaGiraffe
+        </store>
+    </todoitem>
+</items>

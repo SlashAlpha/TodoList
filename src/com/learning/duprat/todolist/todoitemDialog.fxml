@@ -1,0 +1,28 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Box?>
+<DialogPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.learning.duprat.todolist.DialogController">
+    <headerText>
+
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Short descritpion" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+
+            <TextField fx:id="shortDescriptionField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Mission:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+
+            <TextArea fx:id="detailsArea" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                      wrapText="true"/>
+
+
+            <Label text="Pick A Date" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="deadlinePicker" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Label text="Remaining days Alert" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <Spinner fx:id="countingDays" GridPane.rowIndex="4" GridPane.columnIndex="1" min="1" max="31"/>
+        </GridPane>
+    </content>
+
+
+</DialogPane>

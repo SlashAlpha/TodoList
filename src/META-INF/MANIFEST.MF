@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: com.learning.duprat.ToDoList
+Main-Class: com.learning.duprat.todolist.Main
+
